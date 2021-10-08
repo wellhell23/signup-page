@@ -1,0 +1,33 @@
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	padding: 20px 0;
+	background-color: grey;
+	box-shadow: 5px 5px;
+	border-radius: 5%;
+	width: fit-content;
+}
+label {
+	font-size: 20xp;
+	font-weight: bold;
+}
+input {
+	margin: 10px 30px;
+	font-size: 15px;
+	padding: 5px;
+	border: none;
+	border-radius: 2%;
+}
+button {
+	width: 100px;
+	border: none;
+	border-radius: 10%;
+	text-align: center;
+	align-self: center;
+}
+.error {
+	font-size: 18px;
+	padding-top: 50px;
+}
