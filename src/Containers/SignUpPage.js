@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './signUpPage.module.css'
+import './signUpPage.css'
 class SignUpPage extends Component {
     constructor(props) {
         super(props)
@@ -24,7 +24,8 @@ class SignUpPage extends Component {
 
     onChangeFname = (event) => {
         const fname = event.target.value;
-        if (fname.length > 0) {
+        const pattern = "^[A-Za-z]\\w{3,29}$"
+        if (fname.match(pattern)) {
             this.setState({
                 fname: fname,
                 errorSuccess: '',
@@ -34,7 +35,7 @@ class SignUpPage extends Component {
         }
         else {
             this.setState({
-                fname: '',
+                fname: fname,
                 errorSuccess: 'Invalid',
                 errorfname: "Invalid"
             })
@@ -44,7 +45,8 @@ class SignUpPage extends Component {
 
     onChangeLname = (event) => {
         const lname = event.target.value;
-        if (lname.length > 0) {
+        const pattern = "^[A-Za-z]\\w{2,29}$"
+        if (lname.match(pattern)) {
             this.setState({
                 lname: lname,
                 errorSuccess: '',
@@ -169,7 +171,7 @@ class SignUpPage extends Component {
 
                         <button type="submit">Sign Up</button>
                     </form>
-                    {this.state.success && <h1>successful SignUp</h1>}
+                    {this.state.success && <h1>Successful SignUp</h1>}
                 </div>
             </div>
         )
